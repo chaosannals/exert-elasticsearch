@@ -1,0 +1,8 @@
+### 添加别名
+PUT http://127.0.0.1:9200/exert_v3/_alias/exert HTTP/1.1
+
+### 获取现有别名
+GET http://127.0.0.1:9200/exert_v3/_alias HTTP/1.1
+
+### 删除指定别名
+DELETE http://127.0.0.1:9200/exert_v3/_alias/exert HTTP/1.1
