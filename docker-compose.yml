@@ -2,7 +2,7 @@ version: '3.8'
 
 services: 
   elasticsearch-server:
-    image: elasticsearch
+    image: elasticsearch:7.10.1
     container_name: elasticsearch-server
     restart: always
     ports: 
@@ -11,5 +11,4 @@ services:
     environment: 
       discovery.type: 'single-node'
     volumes: 
-      - D:\ElasticSearch\data:/usr/share/elasticsearch/data
-      # - /path/to/elasticsearch:/usr/share/elasticsearch/data
+      - ./data:/usr/share/elasticsearch/data
