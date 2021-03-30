@@ -9,6 +9,13 @@ services:
       - '9200:9200'
       - '9300:9300'
     environment: 
-      discovery.type: 'single-node'
+      - discovery.type=single-node
     volumes: 
       - ./data:/usr/share/elasticsearch/data
+    networks:
+      - exert-elasticsearch-net
+
+networks:
+  exert-elasticsearch-net:
+    name: exert-elasticsearch-net
+    driver: bridge
