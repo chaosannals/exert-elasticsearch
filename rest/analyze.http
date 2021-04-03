@@ -1,0 +1,8 @@
+### 分析分词
+POST http://127.0.0.1:9200/_analyze
+Content-Type: application/json
+
+{
+    "analyzer": "ik_smart",
+    "text": "中文分词"
+}

@@ -1,17 +1,31 @@
 version: '3.8'
 
 services: 
+  # elastic 服务器
   elasticsearch-server:
-    image: elasticsearch:7.10.1
-    container_name: elasticsearch-server
+    image: elasticsearch:7.12.0
+    container_name: exert-elasticsearch-server
     restart: always
     ports: 
-      - '9200:9200'
-      - '9300:9300'
+      - 9200:9200
+      - 9300:9300
     environment: 
       - discovery.type=single-node
     volumes: 
-      - ./data:/usr/share/elasticsearch/data
+      - ./elastic/data:/usr/share/elasticsearch/data
+      - ./elastic/plugins:/usr/share/elasticsearch/plugins
+    networks:
+      - exert-elasticsearch-net
+  
+  # kibana 服务器
+  kibana-server:
+    image: kibana:7.12.0
+    container_name: exert-elasticsearch-kibana-server
+    restart: always
+    ports:
+      - 5601:5601
+    volumes: 
+      - ./kibana/conf:/usr/share/kibana/config:ro
     networks:
       - exert-elasticsearch-net
 

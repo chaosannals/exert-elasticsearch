@@ -1,0 +1,15 @@
+### 获取指定 ID 的文档
+GET http://127.0.0.1:9200/exert_tester/_doc/1
+
+### 搜索
+GET http://127.0.0.1:9200/exert_tester/_search
+Content-Type: application/json
+
+{
+    "explain": true,
+    "query": {
+        "match": {
+            "nickname": "昵称"
+        }
+    }
+}

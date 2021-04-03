@@ -1,0 +1,20 @@
+### 添加数据
+POST http://127.0.0.1:9200/exert_tester/_doc HTTP/1.1
+Content-Type: application/json
+
+{
+    "account": "aaa123456",
+    "nickname": "昵称123456",
+    "number": "123456"
+}
+
+### 添加数据指定 ID 1，如果存在则更新。
+POST http://127.0.0.1:9200/exert_tester/_doc/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "account": "aaa123456",
+    "nickname": "昵称123456",
+    "number": "123456"
+}
+
