@@ -1,0 +1,20 @@
+{
+    "name": "chaosannals/exert-elasticsearch",
+    "description": "elasticsearch",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "chaosannals",
+            "email": "chaosannals@outlook.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "exert\\": "main"
+        }
+    },
+    "require": {
+        "elasticsearch/elasticsearch": "^7.12"
+    }
+}

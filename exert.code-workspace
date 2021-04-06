@@ -4,6 +4,9 @@
 			"path": "."
 		},
 		{
+			"path": "php"
+		},
+		{
 			"path": "python"
 		}
 	],
